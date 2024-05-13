@@ -1,9 +1,14 @@
 $mainColor: #9057CD;
 $secondColor: #402865;
 $linkColor: #412966AD;
+$whiteColor: #FFFFFF;
+$blackColor: #000000;
+$toggleColor: #351E15;
+$paragraphColor: #5E443A;
 
 body {
-    font-family: "Montserrat", sans-serif;
+    // font-family: "Montserrat", sans-serif;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
     background-color: #FFF;
     overflow: hidden;
 }
@@ -34,11 +39,6 @@ a:focus {
     box-shadow: none !important;
 }
 
-// i,
-// img {
-//     cursor: pointer;
-// }
-
 .main-color {
     color: $mainColor;
 }
@@ -47,20 +47,40 @@ a:focus {
     background-color: $mainColor;
 }
 
-
 /* navbar */
 .navbar {
     // box-shadow: 0px 4px 6px rgba(147, 147, 147, 0.05);
-
+    transition: all 0.5s;
     .container-navbar-brand {
         a {
             img {
                 width: 120px;
                 cursor: pointer;
+
+                @media screen and (max-width: 1199.9px) {
+                    width: 100px;
+                }
             }
         }
         span {
-            font-size: 14px !important;
+            font-size: 13px !important;
+
+            @media screen and (max-width: 1199.9px) {
+                display: none;
+            }
+        }
+    }
+
+    .language-btn {
+        display: flex;
+
+        span {
+            color: $mainColor;
+        }
+        @media screen and (min-width: 991.9px) {
+            &.mob-view {
+                display: none;
+            }
         }
     }
 
@@ -68,7 +88,7 @@ a:focus {
         transition: all 0.25s;
         width: 40px;
         height: 40px;
-        margin-right: 15px;
+        margin-inline-end: 15px;
         cursor: pointer;
 
         &::before {
@@ -76,10 +96,10 @@ a:focus {
             position: absolute;
             width: 25px !important;
             height: 3px !important;
-            background-color: $mainColor;
+            background-color: $toggleColor;
             transition: all 0.25s;
-            transform: translateY(-10px);
-            box-shadow: 0 10px 0 $mainColor;
+            transform: translateY(-8px);
+            box-shadow: 0 8px 0 $toggleColor;
         }
 
         &::after {
@@ -87,15 +107,15 @@ a:focus {
             position: absolute;
             width: 25px !important;
             height: 3px !important;
-            background-color: $mainColor;
+            background-color: $toggleColor;
             transition: all 0.25s;
-            transform: translateY(10px);
+            transform: translateY(8px);
         }
 
         &.convert {
             &::before {
                 transform: translateY(0px) rotate(45deg);
-                box-shadow: 0 0 0 $mainColor;
+                box-shadow: 0 0 0 $toggleColor;
             }
 
             &::after {
@@ -109,46 +129,52 @@ a:focus {
     }
 
     .navbar-nav {
+        @media screen and (max-width: 991.9px) {
+            margin-inline: auto;
+        }
         li {
             margin: auto 0.5rem;
 
-            @media screen and (max-width: 992px) {
+            @media screen and (max-width: 991.9px) {
                 margin: auto;
             }
 
             a {
                 color: $linkColor;
                 position: relative;
+                font-size: 14px;
                 font-weight: 600;
                 transition: all 0.25s;
                 text-align: center;
 
-                @media screen and (max-width: 992px) {
+                @media screen and (max-width: 991.9px) {
                     margin-bottom: 0.75rem;
+                    color: $whiteColor;
+                    font-weight: 500;
                 }
 
-                &::before {
-                    content: '';
-                    position: absolute;
-                    width: 50%;
-                    opacity: 0;
-                    height: 1px;
-                    background-color: $mainColor;
-                    bottom: 6px;
-                    right: 100%;
-                    transition: all 0.25s;
-                }
+                // &::before {
+                //     content: '';
+                //     position: absolute;
+                //     width: 50%;
+                //     opacity: 0;
+                //     height: 1px;
+                //     background-color: $mainColor;
+                //     bottom: 6px;
+                //     right: 100%;
+                //     transition: all 0.25s;
+                // }
                 
                 &.active, &:hover, &:focus {
                     color: $mainColor !important;
-                    font-weight: 600;
+                    font-weight: 800 !important;
 
                     &::before {
                         right: 0% !important;
                         transform: translateX(-50%) !important;
                         opacity: 0.7 !important;
                         
-                        @media screen and (max-width: 992px) {
+                        @media screen and (max-width: 991.9px) {
                             display: none !important;
                         }
                     }
@@ -158,11 +184,21 @@ a:focus {
     }
     
     .navbar-collapse {
-        /* background-color: rgba(0, 0, 0, 0.9); */
         transition: all 0.5s;
+
+        @media screen and (max-width: 991.9px) {
+            background-color: rgba(0, 0, 0, 0.85);
+
+            .language-btn {
+                display: none !important;
+            }
+        }
     }
 
     .custome {
+        @media screen and (max-width: 991.9px) {
+            display: none !important;
+        }
         div {
             border: 1px solid $mainColor;
             border-radius: 8px;
@@ -173,18 +209,16 @@ a:focus {
             box-shadow: 0px 4px 6px rgba(147, 147, 147, 0.26);
         }
 
-        .language {
+        .join {
             transition: all 0.25s;
-
-            i {
-                transition: all 0.25s;
-            }
 
             button {
                 color: $mainColor;
                 border: none;
                 outline: none;
                 background-color: transparent;
+                font-size: 13px;
+                font-weight: 600;
                 cursor: pointer;
                 transition: all 0.25s;
             }
@@ -192,241 +226,173 @@ a:focus {
             &:hover {
                 background-color: $mainColor;
 
-                button, h5, i {
+                button {
                     color: #fff !important;
+                }
+            }
+        }
+    }
+
+    &.second-nav {
+        transition: all 0.5s;
+        background-color: $blackColor !important;
+
+        .language-btn {
+            span {
+                color: $whiteColor;
+            }
+        }
+        .navbar-toggler {
+            &::before {
+                background-color: $whiteColor;
+                box-shadow: 0 8px 0 $whiteColor;
+            }
+    
+            &::after {
+                background-color: $whiteColor;
+            }
+    
+            &.convert {
+                &::before {
+                    box-shadow: 0 0 0 $whiteColor;
+                }
+            }
+        }
+        .navbar-nav {
+            li {
+                a {
+                    color: $whiteColor;
+                    font-weight: 500;
                 }
             }
         }
     }
 }
 
-.active {
-    color: $mainColor !important;
-    &::before {
-        right: 0% !important;
-        transform: translateX(-50%) !important;
-        opacity: 0.7 !important;
+// .active {
+//     color: $mainColor !important;
+//     &::before {
+//         right: 0% !important;
+//         transform: translateX(-50%) !important;
+//         opacity: 0.7 !important;
 
-        @media screen and (max-width: 992px) {
-            display: none !important;
-        }
-    }
-}
+//         @media screen and (max-width: 991.9px) {
+//             display: none !important;
+//         }
+//     }
+// }
 
 
 /* header  */
 .home {
-    margin-top: 50px;
-    /* background-color: rgba(249, 249, 249, 0.8); */
-    // background-color: rgba(238, 238, 238, 0.8);
+    .total-header {
+        margin-top: 5rem;
+    
+        .container {
+            background: url(../imgs/bg-header.png) #f9f3fa;
+            background-position: right bottom;
+            background-size: contain;
+            background-repeat: no-repeat;
+            padding: 3rem 4rem 0rem;
+            border-radius: 1.25rem;
+
+            .caption {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    width: 45px;
+                    height: 4px;
+                    background-color: $mainColor;
+                    left: 0;
+                    right: 0;
+                    top: -40px;
+
+                    @media screen and (max-width: 992px) {
+                        top: -20px;
+                    }
+                }
+                h1 {
+                    font-size: 3rem;
+                    color: $secondColor;
+
+                    @media screen and (min-width: 768px) and (max-width: 1200px) {
+                        font-size: 2.5rem;
+                    }
+                    
+                    @media screen and (max-width: 767.9px) {
+                        font-size: 2rem;
+                    }
+                }
+                p {
+                    color: $paragraphColor;
+                    // font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 2.5rem;
+                }
+            }
+
+            .img-header {
+                img {
+                    height: 400px;
+                }
+            }
+        }
+    }
 }
 
-.total-header {
-    padding-top: 8rem;
-}
+.buttons {
+    button {
+        font-size: 14px;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        width: 200px;
+        font-weight: 800;
+        transition: all 0.25s;
+        text-transform: uppercase;
+        border-radius: 0.6rem;
 
-.min-vh-70 {
-    min-height: 70vh;
-}
-
-.caption h1 {
-    font-size: 3.5rem;
-}
-
-.caption p {
-    color: #636363;
-    font-size: 20px;
-}
-
-.buttons a,
-.buttons button {
-    font-size: 18px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    width: 200px;
-    font-weight: 600;
-    line-height: 22px;
-    transition: all 0.25s;
-}
-
-.trailer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10000;
-    background-color: rgba(0, 0, 0, 0.907);
-    width: 100%;
-    min-height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    visibility: hidden;
-    opacity: 0;
-}
-
-.trailer.play {
-    visibility: visible;
-    opacity: 1;
-}
-
-.trailer video {
-    position: relative;
-    width: 900px;
-    outline: none;
-}
-
-.close {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    filter: invert(1);
-    font-size: 30px;
-}
-
-@media screen and (max-width: 992px) {
-    .trailer video {
-        max-width: 90%;
+        @media screen and (max-width: 1200px) and (min-width: 992px) {
+            margin-bottom: 1rem;
+        }
+    
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 1rem;
+    
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 
 .main-btn {
     background-color: $mainColor;
-    /* color: #fff; */
-    border: 1px solid $mainColor;
-}
+    color: $whiteColor;
+    border: 1px solid transparent;
+    transition: all 0.3s !important;
 
-.main-btn:hover {
-    background-color: transparent;
-    color: $mainColor;
+    &:hover {
+        background-color: transparent;
+        border: 1px solid $mainColor;
+        color: $mainColor;
+    }
 }
 
 .second-btn {
     background-color: transparent;
     color: $mainColor;
     border: 1px solid $mainColor;
-}
+    transition: all 0.3s !important;
 
-.second-btn:hover {
-    background-color: $mainColor;
-    color: #fff;
-}
-
-.caption,
-.img-header {
-    position: relative;
-    z-index: 2;
-}
-
-.img-phone img {
-    /* height: 22rem; */
-    /* position: relative; */
-    /* z-index: 2; */
-    transition: all 0.5s;
-}
-
-.img-phone img:hover {
-    transform: scale(1.1, 1.1);
-}
-
-.vectors .vector {
-    top: 50%;
-}
-
-/* Responsive header section */
-
-@media screen and (max-width: 992px) {
-    .total-header .row {
-        flex-direction: column-reverse;
-    }
-
-    .total-header {
-        padding-bottom: 2.5rem;
-    }
-
-    .caption,
-    .img-header {
-        width: 75%;
-        margin-right: auto;
-        margin-left: auto;
-    }
-
-    .caption p {
-        font-size: 18px;
-    }
-
-    .vectors {
-        display: none !important;
-    }
-
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1400px) {
-    .img-header>img {
-        width: 65% !important;
-    }
-
-    .img-phone>img {
-        width: 85% !important;
-    }
-
-    .caption h1 {
-        font-size: 3rem;
+    &:hover {
+        background-color: $mainColor;
+        border: 1px solid transparent;
+        color: $whiteColor;
     }
 }
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-    .img-header>img {
-        width: 70% !important;
-    }
-
-    .img-phone>img {
-        width: 80% !important;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    .img-header>img {
-        width: 70% !important;
-    }
-
-    .img-phone>img {
-        width: 90% !important;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
-    .caption h1 {
-        font-size: 2.5rem;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .img-header>img {
-        width: 70% !important;
-    }
-
-    .img-phone>img {
-        width: 80% !important;
-    }
-
-    .caption h1 {
-        font-size: 2rem;
-    }
-
-    .buttons a {
-        /* width: 150px; */
-        margin-bottom: 1.25rem;
-    }
-}
-
-/* @media screen and (min-width: 300px) and (max-width: 500px){
-    .special-m{
-        margin-bottom: 1rem;
-        margin-left: 20px;
-    }
-} */
 
 /* Features section */
 
