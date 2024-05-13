@@ -146,7 +146,7 @@ for (let x = 0; x < trans.length; x++) {
     
             // .................................................
     
-            $('.features').attr('dir', 'ltr');
+            $('.employer').attr('dir', 'ltr');
     
             if ($('body').width() > 992) {
                 $('.special').css({ 'marginRight': '0px', 'marginLeft': 'auto' });
@@ -157,22 +157,28 @@ for (let x = 0; x < trans.length; x++) {
                 $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
             }
     
-            $('.feature span').css({ 'marginLeft': '0px', 'marginRight': '14px' })
-            $('.features .main-title h5').text('Features');
-            $('.features .main-title h2').text('We do this and more');
-            $('.feature .one').text('Book your appointment with our partners and choose the day that suits you.  All you must do is choose the appropriate date and book it, (Halls, restaurants, car rental, clinics and many other) all you need just choose the suitable date and time.');
-            $('.feature .two').html('Enjoy with your family members or friends, we collected the best entertainment places in your area that suit all categories and saved the time of confusion and choice for you.');
-            $('.feature .three').text('Dont be confused of choosing where to go and where are the best places to have fun with our partners in KSA, EGYPYT and soon in all GCC Countries.');
-            $('.feature .four').text('The most unique and exclusive coupons you can buy through the application that provide saving for you, get coupons and discount services.');
-            $('.feature .five').text('The most exclusive offers in your area in various fields according to your interest and thus we saved the hard of searching for the best offers and also, we saved your money.');
-            $('.feature .six').text('Why do you wait for your turn and stop in the crowded queues? Take the waiting number while you are at home and come to your appointment at Banks, Hospitals, Restaurants and others.');
-            $('.feature .seven').text('Order from the application, receive when you in the car, and save the time of preparation for yourself.');
-            $('.feature .eight').text('Request the service you need while you at home! Home services, telephone consultations and more.');
-    
+            $('.employer .main-title h2').text('Employer Benefits');
+            $('.employer .one h5').text('Zero Cost');
+            $('.employer .one p').text('No hidden, surprise or additional fees.');
+            $('.employer .two h5').text('Zero Interest');
+            $('.employer .two p').text('Full compliance with Shariah.');
+            $('.employer .three h5').text('Time-saving');
+            $('.employer .three p').text('Release pressure on human resources in your company.');
+            $('.employer .four h5').text('Easy Liquidity');
+            $('.employer .four p').text('Your employees will no longer need to apply for loans.');
+            $('.employer .five h5').text('Money Collection');
+            $('.employer .five p').text('Withdrawn Payments will be automatically deducted when transferring salaries.');
+            $('.employer .six h5').text('Quick Access');
+            $('.employer .six p').text('Meet the financial needs of your employees whenever they want.');
+            $('.employer .seven h5').text('Increased Productivity');
+            $('.employer .seven p').text('Free your employees from financial worries, enabling complete focus on their work.');
+            $('.employer .eight h5').text('Turnover Reduction');
+            $('.employer .eight p').text('Enhance employee job satisfaction and loyalty.');
+            $('.employer .buttons button').text('See more');
             // ................................................
     
-            $('.screenshots h5').text('Application');
-            $('.screenshots h2').text('Get the knowledge about the app');
+            $('.employee h5').text('Application');
+            $('.employee h2').text('Get the knowledge about the app');
     
             // ................................................
     
@@ -278,7 +284,7 @@ for (let x = 0; x < trans.length; x++) {
 
             // .................................................
     
-            $('.features').attr('dir', 'rtl');
+            $('.employer').attr('dir', 'rtl');
     
             if ($('body').width() > 992) {
                 $('.special').css({ 'marginLeft': '0px', 'marginRight': 'auto' });
@@ -289,22 +295,28 @@ for (let x = 0; x < trans.length; x++) {
                 $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
             }
     
-            $('.feature span').css({ 'marginRight': '0px', 'marginLeft': '14px' })
-            $('.features .main-title h5').text('المميزات');
-            $('.features .main-title h2').text('نسوي كذا وأكثر');
-            $('.feature .one').text('‌احجز موعدك مع شركائنا واختار اليوم اللي يناسبك سواء استراحات‌، قاعات، مطاعم، تأجير سيارات، عيادات وغيرها العديد كل اللي عليك تختار الموعد المناسب وتحجز‌.');
-            $('.feature .two').html('‌استمتع مع أفراد أسرتك أو أصدقائك جمعنا أفضل الأماكن الترفيهية في منطقتك‌ اللي تناسب كل‌‌ الفئات وفرنا عليك وقت الحيرة والاختيار‌.');
-            $('.feature .three').text('‌لا تحتار وتشيل هم وين تروح ووين افضل الأماكن لقضاء متعتك من خلال شركائنا في كل من المملكة العربية السعودية و‌‌مصر وقريباً في الخليج .');
-            $('.feature .four').text(' أكثر العروض في منطقتك والحصرية في مجالات متعددة حسب اهتمامك وبكذا وفرنا عليك مشقة البحث عن‌ ‌افضل العروض ووفرنا مالك‌.');
-            $('.feature .five').text('‌ليه تنتظر دورك وتوقف في زحمة الطوابير خذ رقم الانتظار وانت في بيتك وتعال على‌ ‌موعدك بنوك‌، مستشفيات، عيادات، مطاعم وغيرها.');
-            $('.feature .six').text('‌اطلب من التطبيق واستلم من السيارة و وفر على نفسك وقت التجهيز .‌');
-            $('.feature .seven').text('‌اكثر الكوبونات الحصرية والخاصة تقدر تشتريها من خلال التطبيق واللي توفر عليك، احصل على‌ ‌كوبونات وخدمات مخفضة .');
-            $('.feature .eight').text('‌اطلب الخدمة اللي تحتاجها وانت ببيتك!‌ ‌صيانة منزلية، عاملات منزلية، استشارات‌‌ هاتفية مع مختصين قانونيين ‌ماليين وغيرهم..');
-    
+            $('.employer .main-title h2').text('مزايا صاحب العمل');
+            $('.employer .one h5').text('صفر تكلفة');
+            $('.employer .one p').text('بدون رسوم خفية أو مفاجئة أو إضافية.');
+            $('.employer .two h5').text('صفر فوائد');
+            $('.employer .two p').text('متوافق مع مبادئ الشريعة الإسلامية.');
+            $('.employer .three h5').text('توفير الوقت');
+            $('.employer .three p').text('يخفف أعباء قسم الموارد البشرية في شركتك.');
+            $('.employer .four h5').text('سيولة بسهولة');
+            $('.employer .four p').text('لن يحتاج موظفوك للاستدانة بعد الآن.');
+            $('.employer .five h5').text('استرداد المال');
+            $('.employer .five p').text('اقتطاع تلقائي للمبالغ المسحوبة عند تحويل الرواتب.');
+            $('.employer .six h5').text('وصول سريع');
+            $('.employer .six p').text('تأمين الاحتياجات المالية لموظفيك متى أرادوا.');
+            $('.employer .seven h5').text('إنتاجية أعلى');
+            $('.employer .seven p').text('إزالة الصعوبات المالية عن موظفيك ليكون تركيزهم على عملهم فقط.');
+            $('.employer .eight h5').text('الحد من التسرب الوظيفي');
+            $('.employer .eight p').text('تحسين الرضا والولاء الوظيفي لموظفيك.');
+            $('.employer .buttons button').text('شاهد المزيد');
             // ................................................
     
-            $('.screenshots h5').text('التطبيق');
-            $('.screenshots h2').text('تعرف على التطبيق');
+            $('.employee h5').text('التطبيق');
+            $('.employee h2').text('تعرف على التطبيق');
     
             // ................................................
     

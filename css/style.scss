@@ -1,15 +1,17 @@
 $mainColor: #9057CD;
+$mainBg: #F9F3FA;
 $secondColor: #402865;
 $linkColor: #412966AD;
 $whiteColor: #FFFFFF;
 $blackColor: #000000;
 $toggleColor: #351E15;
 $paragraphColor: #5E443A;
+$employerItemColor: #2B2B2B;
 
 body {
     // font-family: "Montserrat", sans-serif;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
-    background-color: #FFF;
+    background-color: $whiteColor;
     overflow: hidden;
 }
 
@@ -22,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     color: $mainColor;
-    background-color: #000;
+    background-color: $blackColor;
 }
 
 #topBtn {
@@ -85,7 +87,7 @@ a:focus {
     }
 
     .navbar-toggler {
-        transition: all 0.25s;
+        transition: all 0.3s;
         width: 40px;
         height: 40px;
         margin-inline-end: 15px;
@@ -97,7 +99,7 @@ a:focus {
             width: 25px !important;
             height: 3px !important;
             background-color: $toggleColor;
-            transition: all 0.25s;
+            transition: all 0.3s;
             transform: translateY(-8px);
             box-shadow: 0 8px 0 $toggleColor;
         }
@@ -108,7 +110,7 @@ a:focus {
             width: 25px !important;
             height: 3px !important;
             background-color: $toggleColor;
-            transition: all 0.25s;
+            transition: all 0.3s;
             transform: translateY(8px);
         }
 
@@ -144,7 +146,7 @@ a:focus {
                 position: relative;
                 font-size: 14px;
                 font-weight: 600;
-                transition: all 0.25s;
+                transition: all 0.3s;
                 text-align: center;
 
                 @media screen and (max-width: 991.9px) {
@@ -162,7 +164,7 @@ a:focus {
                 //     background-color: $mainColor;
                 //     bottom: 6px;
                 //     right: 100%;
-                //     transition: all 0.25s;
+                //     transition: all 0.3s;
                 // }
                 
                 &.active, &:hover, &:focus {
@@ -210,7 +212,7 @@ a:focus {
         }
 
         .join {
-            transition: all 0.25s;
+            transition: all 0.3s;
 
             button {
                 color: $mainColor;
@@ -220,14 +222,14 @@ a:focus {
                 font-size: 13px;
                 font-weight: 600;
                 cursor: pointer;
-                transition: all 0.25s;
+                transition: all 0.3s;
             }
 
             &:hover {
                 background-color: $mainColor;
 
                 button {
-                    color: #fff !important;
+                    color: $whiteColor !important;
                 }
             }
         }
@@ -289,7 +291,7 @@ a:focus {
         margin-top: 5rem;
     
         .container {
-            background: url(../imgs/bg-header.png) #f9f3fa;
+            background: url(../imgs/bg-header.png) $mainBg;
             background-position: right bottom;
             background-size: contain;
             background-repeat: no-repeat;
@@ -349,7 +351,7 @@ a:focus {
         padding-bottom: 0.75rem;
         width: 200px;
         font-weight: 800;
-        transition: all 0.25s;
+        transition: all 0.3s;
         text-transform: uppercase;
         border-radius: 0.6rem;
 
@@ -393,6 +395,55 @@ a:focus {
         color: $whiteColor;
     }
 }
+
+.main-title {
+    h2 {
+        color: $secondColor;
+        text-align: center;
+        font-weight: 600;
+        padding-block: 2rem;
+    }
+}
+
+.employer {
+    .employer-item {
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        transition: all 0.3s;
+
+        h5 {
+            color: $blackColor;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-block: 0.75rem;
+        }
+        p {
+            color: $employerItemColor;
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            box-shadow: 3px 3px 3px 3px rgb(0 0 0/15%);
+        }
+    }
+
+    .buttons {
+        button {
+            font-weight: 600;
+            width: 150px;
+
+            @media screen and (max-width: 768px) {
+                width: 90%;
+            }
+        }
+    }
+}
+
+.employee {
+    background-color: $mainBg;
+}
+
 
 /* Features section */
 
