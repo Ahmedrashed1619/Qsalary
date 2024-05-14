@@ -143,20 +143,9 @@ for (let x = 0; x < trans.length; x++) {
             $('.caption .buttons .second-btn').html('<i class="fa-solid fa-download me-1"></i> Download the app')
             $('.caption .buttons .second-btn i').addClass('me-1');
             $('.caption .buttons .second-btn i').removeClass('ms-1');
-    
             // .................................................
     
             $('.employer').attr('dir', 'ltr');
-    
-            if ($('body').width() > 992) {
-                $('.special').css({ 'marginRight': '0px', 'marginLeft': 'auto' });
-                $('.special-second').css({ 'marginLeft': '0px', 'marginRight': 'auto' });
-            }
-            else {
-                $('.special').css({ 'marginRight': 'auto', 'marginLeft': 'auto' });
-                $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
-            }
-    
             $('.employer .main-title h2').text('Employer Benefits');
             $('.employer .one h5').text('Zero Cost');
             $('.employer .one p').text('No hidden, surprise or additional fees.');
@@ -224,26 +213,7 @@ for (let x = 0; x < trans.length; x++) {
             $('.about h5').text('About us');
             $('.about h2').text('About Zari on time...');
             $('.about p').text('An application that provides various reservation services for hospitals, salons, restaurants, banks, and others... In Saudi Arabia, Egypt, and soon in the GCC Countries, and you can see all the offers and coupons while you are at home.');
-    
             // .................................................
-    
-            $('.get').attr('dir', 'ltr');
-            $('.get .main-title h5').text('Get our app');
-            $('.get .main-title h2').text('Download the application');
-            $('.get .main-title p').text('Our applications are available now on App store & Play store..');
-            $('.parag p').css('textAlign', 'start');
-            $('.client h4').text('Zari on Time (Client App)');
-            $('.client i').removeClass('ms-3');
-            $('.client i').addClass('me-3');
-            $('.client .parag .available').text('Available on the');
-            $('.client .parag .get-on').text('Get On');
-            $('.manager h4').text('Zari on Time (Manager App)');
-            $('.manager i').removeClass('ms-3');
-            $('.manager i').addClass('me-3');
-            $('.manager .available').text('Available on the');
-            $('.manager .get-on').text('Get On');
-    
-            // ...................................................
     
             $('.footer').attr('dir', 'ltr')
             $('.logo-footer p').text(`Zari On Time it’s an application for booking appointments with service and product providers
@@ -319,20 +289,9 @@ for (let x = 0; x < trans.length; x++) {
             $('.caption .buttons .second-btn').html('<i class="fa-solid fa-download me-1"></i> حـمّـل الـتطبـيـق')
             $('.caption .buttons .second-btn i').removeClass('me-1');
             $('.caption .buttons .second-btn i').addClass('ms-1');
-
             // .................................................
     
             $('.employer').attr('dir', 'rtl');
-    
-            if ($('body').width() > 992) {
-                $('.special').css({ 'marginLeft': '0px', 'marginRight': 'auto' });
-                $('.special-second').css({ 'marginRight': '0px', 'marginLeft': 'auto' });
-            }
-            else {
-                $('.special').css({ 'marginRight': 'auto', 'marginLeft': 'auto' });
-                $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
-            }
-    
             $('.employer .main-title h2').text('مزايا صاحب العمل');
             $('.employer .one h5').text('صفر تكلفة');
             $('.employer .one p').text('بدون رسوم خفية أو مفاجئة أو إضافية.');
@@ -400,27 +359,9 @@ for (let x = 0; x < trans.length; x++) {
             $('.about').attr('dir', 'rtl');
             $('.about h5').text('من نحن ؟');
             $('.about h2').text('عن Zari On Time');
-            $('.about p').text(`تطبيق يهتم بتقديم خدمات الحجز المتنوعة مستشفيات، صالونات، مطاعم، بنوك وغيرها.. في المملكة العربية السعودية ومصر وقريباً في دول الخليج، وتقدر تشوف كل العروض والكوبونات وأنت ببيتك.`);
-    
-            // .................................................
-    
-            $('.get').attr('dir', 'rtl');
-            $('.get .main-title h5').text('الحصول على التطبيق ؟');
-            $('.get .main-title h2').text('حمل التطبيق احجز موعدك وريح بالك!');
-            $('.get .main-title p').text('التطبيق متاح الآن على App store & Play store');
-            $('.parag p').css('textAlign', 'start');
-            $('.client h4').text('Zari on Time (تطبيق العميل)');
-            $('.client i').removeClass('me-3');
-            $('.client i').addClass('ms-3');
-            $('.client .parag .available').text('متاح علي');
-            $('.client .parag .get-on').text('الذهاب لــ');
-            $('.manager h4').text('Zari on Time (تطبيق المدير)');
-            $('.manager i').removeClass('me-3');
-            $('.manager i').addClass('ms-3');
-            $('.manager .available').text('متاح علي');
-            $('.manager .get-on').text('الذهاب لــ');
-    
+            $('.about p').text(`تطبيق يهتم بتقديم خدمات الحجز المتنوعة مستشفيات، صالونات، مطاعم، بنوك وغيرها.. في المملكة العربية السعودية ومصر وقريباً في دول الخليج، وتقدر تشوف كل العروض والكوبونات وأنت ببيتك.`);    
             // ...................................................
+
             $('.footer').attr('dir', 'rtl')
             $('.logo-footer p').text('هو تطبيق لحجز المواعيد مع مزودي الخدمة والمنتجات للحفاظ علي وقت العميل والمنشأة.');
             $('.logo-footer h5').text('تابعنــــا');
