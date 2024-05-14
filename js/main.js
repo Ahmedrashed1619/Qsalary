@@ -23,9 +23,10 @@ $('#btnTopFooter').click(function () {
 $(window).scroll(function () {
 
     let employerOffset = $('#employer').offset().top;
-    let aboutOffset = $('#about').offset().top;
+    // let startOffset = $('#start').offset().top;
 
-    if ($(window).scrollTop() > employerOffset && $(window).scrollTop() < aboutOffset) {
+    // if ($(window).scrollTop() > employerOffset && $(window).scrollTop() < startOffset) {
+    if ($(window).scrollTop() > employerOffset) {
         $('#topBtn').fadeIn(500);
     }
     if ($(window).scrollTop() > 100) {
@@ -60,39 +61,28 @@ $('.navbar-nav .nav-item a').click(function () {
 let active = true;
 let trans = document.querySelectorAll('.language-btn');
 
-// for media query when resize
 
-function changeDirLeft() {
-    if ($('body').width() > 992) {
-        $('.special').css({ 'marginRight': '0px', 'marginLeft': 'auto' });
-        $('.special-second').css({ 'marginLeft': '0px', 'marginRight': 'auto' });
-    }
-    else {
-        $('.special').css({ 'marginRight': 'auto', 'marginLeft': 'auto' });
-        $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
-    }
-}
+$('.faqs .group-quiz .quiz').click(function(){
+    $(this).children('div').toggleClass('add');
+    $(this).parent().siblings().children().children('div').removeClass('add');
+    $(this).siblings().slideToggle(300);
+    $(this).parent().siblings().children('.answer').slideUp(300);
+})
 
-function changeDirRight() {
-    if ($('body').width() > 992) {
-        $('.special').css({ 'marginLeft': '0px', 'marginRight': 'auto' });
-        $('.special-second').css({ 'marginRight': '0px', 'marginLeft': 'auto' });
-    }
-    else {
-        $('.special').css({ 'marginRight': 'auto', 'marginLeft': 'auto' });
-        $('.special-second').css({ 'marginLeft': 'auto', 'marginRight': 'auto' });
-    }
-}
+// in the begining..
 
-$(window).on('resize', () => {
-
-    if (active === true) {
-        changeDirLeft();
-    }
-    else {
-        changeDirRight();
-    }
-});
+$(document).ready(()=>{
+    $('.faqs .group-quiz .quiz div').eq(0).addClass('add');
+    let answerFaq = Array.from($('.faqs .group-quiz .answer'));
+    
+    for(let i = 0; i < answerFaq.length; i++){
+        $(answerFaq[0]).slideDown();
+        if(i > 0)
+        {
+            $(answerFaq[i]).slideUp();
+        }
+    };
+})
 
 
 // click on button for change lang 
@@ -205,49 +195,20 @@ for (let x = 0; x < trans.length; x++) {
             $('.get-app .img-mob img').attr('src', './imgs/mobile-en.png');
             // ................................................
 
+            $('.faqs').attr('dir', 'ltr');
+            $('.faqs .main-title h2').text('FAQs');
+            $('.faqs .group-quiz .quiz h5').eq(0).text('What is Qsalary ?');
+            $('.faqs .group-quiz .quiz h5').eq(1).text('Is Qsalary a loan service ?');
+            $('.faqs .group-quiz .quiz h5').eq(2).text('For whom is Qsalary ?');
+            $('.faqs .group-quiz .quiz h5').eq(3).text('Is there a minimum salary requirement for this app ?');
+            $('.faqs .group-quiz .quiz h5').eq(4).text('Is there a minimum number of employees required from the company ?');
+            $('.faqs .group-quiz .quiz h5').eq(5).text('Does Qsalary charge any interest ?');
+            $('.faqs .buttons button').text('See more');
+            // ................................................
+
             $('.partners').attr('dir', 'ltr');
             $('.partners .main-title h2').text('َOur Success Partners');
             // ................................................
-
-            $('.about').attr('dir', 'ltr');
-            $('.about h5').text('About us');
-            $('.about h2').text('About Zari on time...');
-            $('.about p').text('An application that provides various reservation services for hospitals, salons, restaurants, banks, and others... In Saudi Arabia, Egypt, and soon in the GCC Countries, and you can see all the offers and coupons while you are at home.');
-            // .................................................
-    
-            $('.footer').attr('dir', 'ltr')
-            $('.logo-footer p').text(`Zari On Time it’s an application for booking appointments with service and product providers
-                to preserve the time of the customer and the facility.`);
-            $('.logo-footer h5').text('Follow us ');
-            $('.navigate .first-navigate').text('navigate');
-            $('.navigate .contact').text('Contact us');
-            $('.navigate .contact2').text('KSA Branches');
-            $('.navigate .contact3').text('Egypt Branches');
-            $('.navigate div span').removeClass('ms-3');
-            $('.navigate div span').addClass('me-3');
-            $('.navigate div .ksa').text('Riyadh Office: 8491 Othman Bin Affaan Road Al Narjas - Riyadh - KSA.');
-            $('.navigate div .ksa2').text('AL-Madina Office: 7865 King Abdullah Bin - Abdulaziz Road - Jasham - AL-Madina - KSA.');
-            $('.navigate div .egy').text('9 Street Saeed Zakaria - Nasr City - Cairo - Egypt');
-            $('.phone a').attr('dir', 'ltr');
-            $('.phone .first').removeClass('ms-2');
-            $('.phone .first').addClass('me-2');
-            $('.phone .second').removeClass('me-2');
-            $('.phone .second').addClass('ms-2');
-    
-            // Contact En
-            $('#contact').attr('dir', 'ltr');
-            $('.main__title-h2').text('Contact Us');
-            $('.label__name').text('Name');
-            $('.label__phone').text(' Phone');
-            $('.label__email').text('  Email');
-            $('.label__company').text('Company Name');
-            $('.label__message').text('Message');
-            $('.btn__message').text('Send Message');
-    
-            // Blog En 
-            $('#rowData').attr('dir', 'ltr');
-            $('.blog__title-h2').text('Blogging');
-            displayBlogEn();
         }
         else {
             // $('body').css('fontFamily', 'IBM Plex Sans Arabic')
@@ -352,49 +313,20 @@ for (let x = 0; x < trans.length; x++) {
             $('.get-app .img-mob img').attr('src', './imgs/mobile-ar.png');
             // ................................................
     
+            $('.faqs').attr('dir', 'rtl');
+            $('.faqs .main-title h2').text('الأسئلة الشائعة');
+            $('.faqs .group-quiz .quiz h5').eq(0).text('ما هو تطبيق Qsalary ؟');
+            $('.faqs .group-quiz .quiz h5').eq(1).text('هل Qsalary خدمة قروض ؟');
+            $('.faqs .group-quiz .quiz h5').eq(2).text('لمن تطبيق Qsalary ؟');
+            $('.faqs .group-quiz .quiz h5').eq(3).text('هل يوجد حد أدنى للرواتب المؤهلة للاستفادة من هذا التطبيق ؟');
+            $('.faqs .group-quiz .quiz h5').eq(4).text('هل يوجد حد أدنى لعدد الموظفين في الشركة ؟');
+            $('.faqs .group-quiz .quiz h5').eq(5).text('هل يتقاضى Qsalary أي فائدة ؟');
+            $('.faqs .buttons button').text('شـاهد الـمـزيـد');
+            // ................................................
+
             $('.partners').attr('dir', 'rtl');
             $('.partners .main-title h2').text('َشركاء النجاح');
             // ................................................
-
-            $('.about').attr('dir', 'rtl');
-            $('.about h5').text('من نحن ؟');
-            $('.about h2').text('عن Zari On Time');
-            $('.about p').text(`تطبيق يهتم بتقديم خدمات الحجز المتنوعة مستشفيات، صالونات، مطاعم، بنوك وغيرها.. في المملكة العربية السعودية ومصر وقريباً في دول الخليج، وتقدر تشوف كل العروض والكوبونات وأنت ببيتك.`);    
-            // ...................................................
-
-            $('.footer').attr('dir', 'rtl')
-            $('.logo-footer p').text('هو تطبيق لحجز المواعيد مع مزودي الخدمة والمنتجات للحفاظ علي وقت العميل والمنشأة.');
-            $('.logo-footer h5').text('تابعنــــا');
-            $('.navigate .first-navigate').text('التنقل');
-            $('.navigate .contact').text('تواصل معنــا');
-            $('.navigate .contact2').text('فروع السعودية');
-            $('.navigate .contact3').text('فروع مصر');
-            $('.navigate div span').removeClass('me-3');
-            $('.navigate div span').addClass('ms-3');
-            $('.navigate div .ksa').text('مكتب الرياض: 8491 طريق انس بن مالك تقاطع طريق عثمان بن عفان النرجس - الرياض - المملكة العربية السعودية.');
-            $('.navigate div .ksa2').text('   مكتب المدينة المنورة: 7865 الملك عبدالله بن عبدالعزيز - جاسم - المدينة المنورة - المملكة العربية السعودية.   ');
-            $('.navigate div .egy').text('9 شارع سعيد زكريا - مدينة نصر - القاهرة - جمهورية مصر العربية.');
-            $('.phone a').attr('dir', 'ltr');
-            $('.phone .first').removeClass('me-2');
-            $('.phone .first').addClass('ms-2');
-            $('.phone .second').removeClass('ms-2');
-            $('.phone .second').addClass('me-2');
-    
-            // contact Ar
-            $('#contact').attr('dir', 'rtl');
-            $('.main__title-h2').text('تواصل معنا');
-            $('.label__name').text('الاسم');
-            $('.label__phone').text('رقم الهاتف');
-            $('.label__email').text('البريد الالكتروني');
-            $('.label__company').text('اسم الشركه');
-            $('.label__message').text('اترك رساله');
-            $('.btn__message').text('  إرسل رساله');
-    
-            // Blog Ar 
-            $('#rowData').attr('dir', 'rtl');
-            $('.blog__title-h2').text('مقالات');
-            displayBlogAr()
-    
         }
     })
 }
