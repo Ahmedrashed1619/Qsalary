@@ -248,7 +248,7 @@ a:focus {
   font-size: 3rem;
   color: #402865;
 }
-@media screen and (min-width: 768px) and (max-width: 1200px) {
+@media screen and (min-width: 767.9px) and (max-width: 1200px) {
   .home .total-header .container .caption h1 {
     font-size: 2.5rem;
   }
@@ -266,6 +266,12 @@ a:focus {
 .home .total-header .container .img-header img {
   height: 400px;
 }
+@media screen and (max-width: 576px) {
+  .home .total-header .container {
+    width: 95%;
+    margin-inline: auto;
+  }
+}
 
 .buttons button {
   font-size: 14px;
@@ -282,7 +288,7 @@ a:focus {
     margin-bottom: 1rem;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .buttons button {
     width: 100%;
     margin-bottom: 1rem;
@@ -316,119 +322,227 @@ a:focus {
   color: #FFFFFF;
 }
 
+.main-title {
+  text-align: center;
+}
 .main-title h2 {
   color: #402865;
-  text-align: center;
   font-weight: 600;
   padding-block: 2rem;
+  margin-inline: auto;
 }
 
-.employer .employer-item {
+.employer .employer-item, .how .employer-item, .financial .employer-item, .employee .employer-item {
   text-align: center;
   padding: 1.5rem;
   border-radius: 0.75rem;
   transition: all 0.3s;
 }
-.employer .employer-item h5 {
+.employer .employer-item h5, .how .employer-item h5, .financial .employer-item h5, .employee .employer-item h5 {
   color: #000000;
   font-size: 1.5rem;
   font-weight: 600;
   margin-block: 0.75rem;
 }
-.employer .employer-item p {
+.employer .employer-item p, .how .employer-item p, .financial .employer-item p, .employee .employer-item p {
   color: #2B2B2B;
+  margin-inline: auto;
   margin-bottom: 0;
 }
-.employer .employer-item:hover {
-  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.15);
+.employer .employer-item:hover, .how .employer-item:hover, .financial .employer-item:hover, .employee .employer-item:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
-.employer .buttons button {
+.employer .buttons button, .how .buttons button, .financial .buttons button, .employee .buttons button {
   font-weight: 600;
   width: 150px;
 }
-@media screen and (max-width: 768px) {
-  .employer .buttons button {
+@media screen and (max-width: 767.9px) {
+  .employer .buttons button, .how .buttons button, .financial .buttons button, .employee .buttons button {
     width: 90%;
   }
 }
 
-.employee {
+.how {
   background-color: #F9F3FA;
 }
-
-/* Features section */
-.feature {
+.how .main-title h6 {
+  color: #402865;
+  font-size: 14px;
+  font-weight: 600;
+}
+.how .main-title h2 {
+  padding-top: 1rem;
+  width: 55%;
+}
+@media screen and (max-width: 991.9px) {
+  .how .main-title h2 {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .how .main-title h2 {
+    width: 90%;
+  }
+}
+.how .employer-item:hover {
+  box-shadow: none;
+}
+.how .employer-item img {
   width: 75%;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  margin-bottom: 2.5rem;
+  height: 250px;
 }
-
-.special {
-  margin-left: auto;
+.how .employer-item h5 {
+  margin-top: 0;
 }
-
-.special-second {
-  margin-right: auto;
-}
-
-.feature span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  margin-right: 14px;
-  border: 1px solid #9057CD;
-  border-radius: 50%;
-}
-
-.feature span img {
-  width: 30px;
-  transition: all 0.5s;
-}
-
-.feature span img:hover {
-  transform: scale(1.15, 1.15);
-}
-
-.feature p {
-  color: #fff;
-  margin-bottom: 0;
-  font-size: 18px;
-  line-height: 1.25;
-}
-
-.img-feature img {
+.how .employer-item p {
   width: 80%;
-  transition: all 0.5s;
+}
+@media screen and (max-width: 767.9px) {
+  .how .employer-item p {
+    width: 90%;
+  }
 }
 
-.img-feature img:hover {
-  transform: scale(1.1, 1.1);
+.financial {
+  background-color: rgba(226, 226, 226, 0.1450980392);
+}
+.financial .main-title h2 {
+  width: 90%;
+}
+.financial .employer-item:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.financial .employer-item h5 {
+  font-size: 3.5rem;
+}
+@media screen and (max-width: 991.9px) {
+  .financial .employer-item h5 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 767.9px) {
+  .financial .employer-item h5 {
+    font-size: 2.5rem;
+  }
+}
+.financial .employer-item p {
+  width: 75%;
+}
+@media screen and (max-width: 767.9px) {
+  .financial .employer-item p {
+    width: 90%;
+  }
+}
+.financial .buttons button {
+  font-size: 14px;
+  width: 200px;
 }
 
-/* Responsive */
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-  .img-feature img {
-    width: 100%;
+.employee .employer-item p {
+  width: 80%;
+}
+@media screen and (max-width: 767.9px) {
+  .employee .employer-item p {
+    width: 90%;
+  }
+}
+
+.get-app {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.get-app .row {
+  background: url(../imgs/bg-get.png) #3D1E63;
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 4rem 0;
+  border-radius: 1.25rem;
+}
+.get-app .row .caption {
+  padding-bottom: 4rem;
+}
+.get-app .row .caption h4 {
+  margin-block: 1.5rem;
+}
+.get-app .row .caption .download-app {
+  display: flex;
+  gap: 1rem;
+}
+.get-app .row .caption .download-app img {
+  width: 150px;
+  cursor: pointer;
+}
+.get-app .row .img-mob img.main-img {
+  display: none;
+  height: 400px;
+}
+.get-app .row .img-mob img.second-img {
+  position: absolute;
+  bottom: 0;
+  height: 450px;
+}
+@media screen and (max-width: 1200px) {
+  .get-app .row .img-mob img.second-img {
+    height: 400px;
   }
 }
 @media screen and (max-width: 992px) {
-  .feature {
-    margin-right: auto;
-    margin-left: auto;
+  .get-app .row .img-mob img.main-img {
+    display: inline-flex;
   }
-  .special {
-    margin-right: auto;
-  }
-  .special-second {
-    margin-left: auto;
-  }
-  .img-feature img {
-    width: 25%;
+  .get-app .row .img-mob img.second-img {
+    display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  .get-app .row .img-mob img.main-img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 991.9px) {
+  .get-app .row {
+    padding-top: 1rem;
+    padding-inline: 2rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .get-app .row {
+    width: 95%;
+    margin-inline: auto;
+  }
+  .get-app .row .caption {
+    padding-bottom: 0rem;
+  }
+  .get-app .row .caption .download-app img {
+    width: 125px;
+  }
+}
+
+.partners .main-title h2 {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.partners .carousel .carousel-item {
+  text-align: center;
+}
+.partners .carousel .carousel-item img {
+  width: 23%;
+  max-height: 250px;
+  margin-inline: auto;
+}
+.partners .carousel .carousel-indicators button {
+  background-color: #000000;
+  opacity: 0.2;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  margin-inline: 0.4rem;
+}
+.partners .carousel .carousel-indicators button.active {
+  opacity: 1;
+}
+
 /* about us section */
 .about .main-title p {
   width: 80%;
@@ -452,7 +566,7 @@ a:focus {
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 767.9px) and (max-width: 992px) {
   .about .img-about img {
     width: 70%;
   }
@@ -500,7 +614,7 @@ a:focus {
     width: 100%;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 767.9px) and (max-width: 992px) {
   .client a,
   .manager a {
     width: 28% !important;
@@ -517,7 +631,7 @@ a:focus {
     width: 75%;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
   .client a,
   .manager a {
     width: 40% !important;

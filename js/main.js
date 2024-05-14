@@ -177,11 +177,49 @@ for (let x = 0; x < trans.length; x++) {
             $('.employer .buttons button').text('See more');
             // ................................................
     
-            $('.employee h5').text('Application');
-            $('.employee h2').text('Get the knowledge about the app');
-    
+            $('.how .main-title h6').text('How Does Qsalary Work?');
+            $('.how .main-title h2').text('Financial Freedom for Your Employees in 3 Simple Steps');
+            $('.how .one h5').text('Register Your Company');
+            $('.how .one p').text('Registration is easy, complications and hassle free, just contact us.');
+            $('.how .two h5').text('Add Your Employees');
+            $('.how .two p').text('Effortlessly add your employees and their details in a click or let us take care of it.');
+            $('.how .three h5').text('Set Maximum Withdrawal Limits for Each Employee');
+            $('.how .three p').text('Enable easy on-demand access to earned wages, complying with wage protection laws.');
+            // ................................................
+
+            $('.financial').attr('dir', 'ltr');
+            $('.financial .main-title h2').text('Taking your employees out of their financial stress');
+            $('.financial .one p').text('of individuals experience financial stress at least once a year');
+            $('.financial .two p').text('the annual cost to employers in lost productivity as a result of employee financial stress');
+            $('.financial .three p').text('of employee turnover attributable to financial stress');
+            $('.financial .buttons button').text('Request a demo');
+            // ................................................
+
+            $('.employee').attr('dir', 'ltr');
+            $('.employee .main-title h2').text('Employee Benefits');
+            $('.employee .one h5').text('Instant Liquidity 24/7');
+            $('.employee .one p').text('Do you have emergency expenses? Get liquidity with just one click.');
+            $('.employee .two h5').text('No More Wages Delays');
+            $('.employee .two p').text('Administrative procedures will no longer hinder your earned wages access. Get the money you need anytime.');
+            $('.employee .three h5').text("You Won't Miss Any Promotion");
+            $('.employee .three p').text('With Qsalary, never miss sales discounts due to liquidity issues.');
+            $('.employee .four h5').text('Centralized Expense Management');
+            $('.employee .four p').text('Enjoy a user-friendly app displaying your remaining wages on your smartphone.');
+            $('.employee .five h5').text('Fixed Fees, 0% Interest');
+            $('.employee .five p').text('No interest will apply to any amount you withdraw, but a flat fee per withdrawal.');
+            $('.employee .buttons button').text('See more');
             // ................................................
     
+            $('.get-app').attr('dir', 'ltr');
+            $('.get-app .caption p').text('َDownload the APP');
+            $('.get-app .caption h4').text('Help Us Contact Your Company');
+            $('.get-app .img-mob img').attr('src', './imgs/mobile-en.png');
+            // ................................................
+
+            $('.partners').attr('dir', 'ltr');
+            $('.partners .main-title h2').text('َOur Success Partners');
+            // ................................................
+
             $('.about').attr('dir', 'ltr');
             $('.about h5').text('About us');
             $('.about h2').text('About Zari on time...');
@@ -314,12 +352,51 @@ for (let x = 0; x < trans.length; x++) {
             $('.employer .eight p').text('تحسين الرضا والولاء الوظيفي لموظفيك.');
             $('.employer .buttons button').text('شاهد المزيد');
             // ................................................
-    
-            $('.employee h5').text('التطبيق');
-            $('.employee h2').text('تعرف على التطبيق');
-    
+
+            $('.how').attr('dir', 'rtl');
+            $('.how .main-title h6').text('؟Qsalary كيف يعمل تطبيق ');
+            $('.how .main-title h2').text(' خطوات بسيطة3حرر موظفيك مالياً بـ');
+            $('.how .one h5').text('سجل شركتك');
+            $('.how .one p').text('ستكون عملية التسجيل سهلة وبسيطة، من غير Qsalary مع أي تعقيدات أو عراقيل، فقط تواصل معنا.');
+            $('.how .two h5').text('أضف موظفيك');
+            $('.how .two p').text('أضف موظفيك وسجل بياناتهم بنقرات بسيطة، أو اترك لنا هذه المهمة.');
+            $('.how .three h5').text('اختر الحد الأقصى للسحب لكل موظف');
+            $('.how .three p').text('امنح موظفيك إمكانية الحصول على مستحقاتهم  بسهولة بما يتوافق مع قوانين حماية الأجور');
+            // ................................................
+
+            $('.financial').attr('dir', 'rtl');
+            $('.financial .main-title h2').text('َلّص موظفيك من قلق الضغوطات المالية');
+            $('.financial .one p').text('من الأفراد يمرون بصعوبات وضائقات مالية مرة سنوياً على الأقل');
+            $('.financial .two p').text('هي الكلفة السنوية للخسارة بسبب نقص إنتاجية الموظفين الذين يعانون من ضغوطات مالية');
+            $('.financial .three p').text('من نسب استقالة الموظفين ترجع إلى الضغوطات المالية');
+            $('.financial .buttons button').text('اطلب عرضاً توضيحياً الآن');
+            // ................................................
+
+            $('.employee').attr('dir', 'rtl');
+            $('.employee .main-title h2').text('مزايا الموظفين');
+            $('.employee .one h5').text('24/7 سيولة مالية فورية');
+            $('.employee .one p').text('هل أنت بحاجة إلى مصاريف طارئة؟ احصل على السيولة بضغطة زر.');
+            $('.employee .two h5').text('لا تأخير في صرف مستحقاتك');
+            $('.employee .two p').text('لن تشكل الإجراءات الإدارية عائقاً للحصول على مستحقاتك المالية.');
+            $('.employee .three h5').text("لن يفوتك أي عرض ترويجي");
+            $('.employee .three p').text('لن تكون نقص السيولة سبباً في تفويت أي خصم على الشراء بعد الآن.');
+            $('.employee .four h5').text('إدارة مصاريفك من مكان واحد');
+            $('.employee .four p').text('تمتع بتطبيق بسيط وسهل يُظهر المبلغ المتبقي من مستحقاتك من خلال هاتفك الذكي.');
+            $('.employee .five h5').text('% فوائد0رسوم ثابتة، ');
+            $('.employee .five p').text('لن تُطبَّق أية فوائد على أي مبلغ تقوم بسحبه، وإنَّما رسوم ثابتة لكل عملية سحب.');
+            $('.employee .buttons button').text('شاهد المزيد');
+            // ................................................
+
+            $('.get-app').attr('dir', 'rtl');
+            $('.get-app .caption p').text('َحمّل التطبيق الآن!');
+            $('.get-app .caption h4').text('واحصل على السيولة بسهولة');
+            $('.get-app .img-mob img').attr('src', './imgs/mobile-ar.png');
             // ................................................
     
+            $('.partners').attr('dir', 'rtl');
+            $('.partners .main-title h2').text('َشركاء النجاح');
+            // ................................................
+
             $('.about').attr('dir', 'rtl');
             $('.about h5').text('من نحن ؟');
             $('.about h2').text('عن Zari On Time');

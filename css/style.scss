@@ -1,5 +1,7 @@
 $mainColor: #9057CD;
 $mainBg: #F9F3FA;
+$financialBg: #E2E2E225;
+$getBg: #3D1E63;
 $secondColor: #402865;
 $linkColor: #412966AD;
 $whiteColor: #FFFFFF;
@@ -7,6 +9,8 @@ $blackColor: #000000;
 $toggleColor: #351E15;
 $paragraphColor: #5E443A;
 $employerItemColor: #2B2B2B;
+$mainShadow: 3px 3px 3px 3px rgb(0 0 0/15%);
+$secondShadow: 5px 5px 20px rgb(0 0 0/20%);
 
 body {
     // font-family: "Montserrat", sans-serif;
@@ -319,7 +323,7 @@ a:focus {
                     font-size: 3rem;
                     color: $secondColor;
 
-                    @media screen and (min-width: 768px) and (max-width: 1200px) {
+                    @media screen and (min-width: 767.9px) and (max-width: 1200px) {
                         font-size: 2.5rem;
                     }
                     
@@ -340,6 +344,11 @@ a:focus {
                     height: 400px;
                 }
             }
+
+            @media screen and (max-width: 576px) {
+                width: 95%;
+                margin-inline: auto;
+            }
         }
     }
 }
@@ -359,7 +368,7 @@ a:focus {
             margin-bottom: 1rem;
         }
     
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 767.9px) {
             width: 100%;
             margin-bottom: 1rem;
     
@@ -397,15 +406,16 @@ a:focus {
 }
 
 .main-title {
+    text-align: center;
     h2 {
         color: $secondColor;
-        text-align: center;
         font-weight: 600;
         padding-block: 2rem;
+        margin-inline: auto;
     }
 }
 
-.employer {
+.employer, .how, .financial, .employee {
     .employer-item {
         text-align: center;
         padding: 1.5rem;
@@ -420,11 +430,12 @@ a:focus {
         }
         p {
             color: $employerItemColor;
+            margin-inline: auto;
             margin-bottom: 0;
         }
 
         &:hover {
-            box-shadow: 3px 3px 3px 3px rgb(0 0 0/15%);
+            box-shadow: $secondShadow;
         }
     }
 
@@ -433,98 +444,242 @@ a:focus {
             font-weight: 600;
             width: 150px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 767.9px) {
                 width: 90%;
             }
         }
     }
 }
 
-.employee {
+.how {
     background-color: $mainBg;
-}
 
+    .main-title {
+        h6 {
+            color: $secondColor;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        h2 {
+            padding-top: 1rem;
+            width: 55%;
 
-/* Features section */
+            @media screen and (max-width: 991.9px) {
+                width: 75%;
+            }
 
-.feature {
-    width: 75%;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    margin-bottom: 2.5rem;
-}
+            @media screen and (max-width: 767.9px) {
+                width: 90%;
+            }
+        }
+    }
 
-.special {
-    margin-left: auto;
-}
+    .employer-item {
 
-.special-second {
-    margin-right: auto;
-}
+        &:hover {
+            box-shadow: none;
+        }
 
-.feature span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 12px;
-    margin-right: 14px;
-    border: 1px solid $mainColor;
-    border-radius: 50%;
-}
+        img {
+            width: 75%;
+            height: 250px;
+        }
+        h5 {
+            margin-top: 0;
+        }
+        p {
+            width: 80%;
 
-.feature span img {
-    width: 30px;
-    transition: all 0.5s;
-}
-
-.feature span img:hover {
-    transform: scale(1.15, 1.15);
-}
-
-.feature p {
-    color: #fff;
-    margin-bottom: 0;
-    font-size: 18px;
-    line-height: 1.25;
-}
-
-.img-feature img {
-    width: 80%;
-    transition: all 0.5s;
-}
-
-.img-feature img:hover {
-    transform: scale(1.1, 1.1);
-}
-
-
-/* Responsive */
-
-@media screen and (min-width: 992px) and (max-width: 1200px) {
-    .img-feature img {
-        width: 100%;
+            @media screen and (max-width: 767.9px) {
+                width: 90%;
+            }
+        }
     }
 }
 
-@media screen and (max-width: 992px) {
-    .feature {
-        margin-right: auto;
-        margin-left: auto;
+.financial {
+    background-color: $financialBg;
+
+    .main-title {
+        h2 {
+            width: 90%;
+        }
     }
 
-    .special {
-        margin-right: auto;
+    .employer-item {
+
+        &:hover {
+            box-shadow: $secondShadow;
+        }
+
+        h5 {
+            font-size: 3.5rem;
+
+            @media screen and (max-width: 991.9px) {
+                font-size: 3rem;
+            }
+
+            @media screen and (max-width: 767.9px) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            width: 75%;
+
+            @media screen and (max-width: 767.9px) {
+                width: 90%;
+            }
+        }
     }
 
-    .special-second {
-        margin-left: auto;
+    .buttons {
+        button {
+            font-size: 14px;
+            width: 200px;
+        }
     }
 
-    .img-feature img {
-        width: 25%;
+}
+
+.employee {
+
+    .employer-item {
+
+        p {
+            width: 80%;
+
+            @media screen and (max-width: 767.9px) {
+                width: 90%;
+            }
+        }
     }
 }
+
+.get-app {
+    color: $whiteColor;
+    font-weight: 600;
+    .row {
+        background: url(../imgs/bg-get.png) $getBg;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 5rem 4rem 0;
+        border-radius: 1.25rem;
+
+        .caption {
+            padding-bottom: 4rem;
+
+            h4 {
+                margin-block: 1.5rem;
+            }
+
+            .download-app {
+                display: flex;
+                gap: 1rem;
+                img {
+                    width: 150px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .img-mob {
+            img {
+                &.main-img {
+                    display: none;
+                    height: 400px;
+                }
+                &.second-img {
+                    position: absolute;
+                    bottom: 0;
+                    height: 450px;
+
+                    @media screen and (max-width: 1200px) {
+                        height: 400px;
+                    }
+                }
+
+                @media screen and (max-width: 992px) {
+                    &.main-img {
+                        display: inline-flex;
+                    }
+                    &.second-img {
+                        display: none;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    &.main-img {
+                        height: 300px;
+                    }
+                }
+            }
+        }
+
+        @media screen and (max-width: 991.9px) {
+            padding-top: 1rem;
+            padding-inline: 2rem;
+        }
+        @media screen and (max-width: 576px) {
+            width: 95%;
+            margin-inline: auto;
+            .caption {
+                padding-bottom: 0rem;
+    
+                .download-app {
+                    img {
+                        width: 125px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.partners {
+    .main-title {
+        h2 {
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .carousel {
+        .carousel-item {
+            text-align: center;
+            img {
+                width: 23%;
+                max-height: 250px;
+                margin-inline: auto;
+            }
+        }
+    
+        .carousel-indicators {
+            button {
+                background-color: $blackColor;
+                opacity: 0.2;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-radius: 50%;
+                margin-inline: 0.4rem;
+    
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* about us section */
 .about .main-title p {
@@ -551,7 +706,7 @@ a:focus {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 767.9px) and (max-width: 992px) {
     .about .img-about img {
         width: 70%;
     }
@@ -606,7 +761,7 @@ a:focus {
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 767.9px) and (max-width: 992px) {
 
     .client a,
     .manager a {
@@ -629,7 +784,7 @@ a:focus {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
 
     .client a,
     .manager a {
