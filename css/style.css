@@ -259,6 +259,11 @@ a:focus {
     font-size: 2rem;
   }
 }
+@media screen and (max-width: 500px) {
+  .home .total-header .container .caption h1 {
+    font-size: 1.5rem;
+  }
+}
 .home .total-header .container .caption p {
   color: #5E443A;
   font-weight: 500;
