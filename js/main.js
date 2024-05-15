@@ -23,9 +23,7 @@ $('#btnTopFooter').click(function () {
 $(window).scroll(function () {
 
     let employerOffset = $('#employer').offset().top;
-    // let startOffset = $('#start').offset().top;
 
-    // if ($(window).scrollTop() > employerOffset && $(window).scrollTop() < startOffset) {
     if ($(window).scrollTop() > employerOffset) {
         $('#topBtn').fadeIn(500);
     }
@@ -95,31 +93,20 @@ for (let x = 0; x < trans.length; x++) {
     
         if (active === true) {
             // $('body').css('fontFamily', 'Montserrat');
-    
             // .............................
     
             $('nav').attr('dir', 'ltr');
             $('.navbar .navbar-toggler').css({ 'marginLeft': '0px', 'marginRight': '15px' });
             $('.navbar .container-navbar-brand span').text('| Your Cash Solution');
-    
             $('a[href = "#home"]').text('Home');
             $('a[href = "#employer"]').text('Employer Benefits');
             $('a[href = "#employee"]').text('Employee Benefits');
             $('a[href = "#about"]').text('About Us');
             $('a[href = "#contact"]').text('Contact');
-    
-            // blogsDetailes page handel ar & en 
-            $('a[href = "index.html#home"]').text('Home');
-            $('a[href = "index.html#employer"]').text('Employer Benefits');
-            $('a[href = "index.html#employee"]').text('Employee Benefits');
-            $('a[href = "index.html#about"]').text('About Us');
-            $('a[href = "index.html#contact"]').text('Contact');
-    
             $('.navbar-collapse .language-btn').addClass('ms-5');
             $('.navbar-collapse .language-btn').removeClass('me-5');
             $('.language-btn span').text('العربيـة');
             $('.language-btn img').attr('src', '../imgs/arabic.png');
-
             $('.custome .join button').text('Join Today');
             // ...............................
     
@@ -209,34 +196,51 @@ for (let x = 0; x < trans.length; x++) {
             $('.partners').attr('dir', 'ltr');
             $('.partners .main-title h2').text('َOur Success Partners');
             // ................................................
+            
+            $('.start').attr('dir', 'ltr');
+            $('.start .main-title h6').text('Start Now');
+            $('.start .main-title h2').text('Ready to empower your employees with anytime wage access ?');
+            $('.start .item i').addClass('me-2');
+            $('.start .item i').removeClass('ms-2');
+            $('.start .item span').eq(0).text('Quick & easy');
+            $('.start .item span').eq(1).text('Automation');
+            $('.start .item span').eq(2).text('No Interests');
+            $('.start .item span').eq(3).text('Stress Free');
+            $('.start .buttons button').text('REQUEST A DEMO');
+            // ................................................
+            
+            $('.contact').attr('dir', 'ltr');
+            $('.contact .main-title h6').eq(0).text('Stay in the know');
+            $('.contact .main-title h3').eq(0).text('Subscribe Mailing List');
+            $('.contact .main-title .subscribe input').attr('placeholder', 'Email address');
+            $('.contact .main-title .subscribe button').text('Subscribe');
+            $('.contact .main-title h6').eq(1).text('Follow Us');
+            $('.contact .main-title h3').eq(1).text('Social Media Accounts');
+            // ................................................
+
+            $('footer').attr('dir', 'ltr');
+            $('footer .navigate a').eq(0).text('Blog');
+            $('footer .navigate a').eq(1).text('FAQ');
+            $('footer .navigate a').eq(2).text('Privacy Policy');
+            $('footer .powered h6').text('Powered by ASFA Ventures');
+            $('footer .rights h6').text('All rights reserved© Qsalary 2023');
         }
         else {
             // $('body').css('fontFamily', 'IBM Plex Sans Arabic')
-    
             // .............................
     
             $('nav').attr('dir', 'rtl');
             $('.navbar .navbar-toggler').css({ 'marginLeft': '15px', 'marginRight': '0px' });
             $('.navbar .container-navbar-brand span').text('| سيولة بكل سهولة');
-    
             $('a[href = "#home"]').text('الرئيسية');
             $('a[href = "#employer"]').text('مزايا صاحب العمل');
             $('a[href = "#employee"]').text('مزايا الموظفين');
             $('a[href = "#about"]').text('نبذة عنا');
             $('a[href = "#contact"]').text('تواصل معنا');
-    
-            /**last update add #contact and blog En nav  */
-            $('a[href = "index.html#home"]').text('الرئيسية');
-            $('a[href = "index.html#employer"]').text('مزايا صاحب العمل');
-            $('a[href = "index.html#employee"]').text('مزايا الموظفين');
-            $('a[href = "index.html#about"]').text('نبذة عنا');
-            $('a[href = "index.html#contact"]').text('تواصل معنا');
-    
             $('.navbar-collapse .language-btn').addClass('me-5');
             $('.navbar-collapse .language-btn').removeClass('ms-5');
             $('.language-btn span').text('English');
             $('.language-btn img').attr('src', '../imgs/english.png');
-
             $('.custome .join button').text('انضم الآن');
             // ...............................
 
@@ -327,6 +331,34 @@ for (let x = 0; x < trans.length; x++) {
             $('.partners').attr('dir', 'rtl');
             $('.partners .main-title h2').text('َشركاء النجاح');
             // ................................................
+
+            $('.start').attr('dir', 'rtl');
+            $('.start .main-title h6').text('ابدأ الآن');
+            $('.start .main-title h2').text('جاهز لتمكين موظفيك من الوصول إلى رواتبهم المستحقة متى أرادوا ؟');
+            $('.start .item i').addClass('ms-2');
+            $('.start .item i').removeClass('me-2');
+            $('.start .item span').eq(0).text('سهل وسريع');
+            $('.start .item span').eq(1).text('بشكل آلي');
+            $('.start .item span').eq(2).text('دون فوائد');
+            $('.start .item span').eq(3).text('خالي من الضغوطات');
+            $('.start .buttons button').text('اطلب عرضاً توضيحياً الآن');
+            // ................................................
+
+            $('.contact').attr('dir', 'rtl');
+            $('.contact .main-title h6').eq(0).text('ابقى على اطلاع');
+            $('.contact .main-title h3').eq(0).text('اشترك بالنشرة البريدية');
+            $('.contact .main-title .subscribe input').attr('placeholder', 'بريدك الإلكتروني');
+            $('.contact .main-title .subscribe button').text('إشتراك');
+            $('.contact .main-title h6').eq(1).text('تابعنا على');
+            $('.contact .main-title h3').eq(1).text('منصات التواصل الإجتماعي');
+            // ................................................
+
+            $('footer').attr('dir', 'rtl');
+            $('footer .navigate a').eq(0).text('المدونة');
+            $('footer .navigate a').eq(1).text('الأسئلة الشائعة');
+            $('footer .navigate a').eq(2).text('سياسة الخصوصية');
+            $('footer .powered h6').text('مدعوم من مشاريع ASFA');
+            $('footer .rights h6').text('جميع الحقوق محفوظة © Qsalary 2023');
         }
     })
 }
