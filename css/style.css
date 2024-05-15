@@ -266,6 +266,7 @@ a:focus {
 }
 .home .total-header .container .img-header img {
   height: 400px;
+  max-width: 100%;
 }
 @media screen and (max-width: 576px) {
   .home .total-header .container {
