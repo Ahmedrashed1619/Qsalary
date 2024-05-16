@@ -101,7 +101,7 @@ for (let x = 0; x < trans.length; x++) {
             $('a[href = "#home"]').text('Home');
             $('a[href = "#employer"]').text('Employer Benefits');
             $('a[href = "#employee"]').text('Employee Benefits');
-            $('a[href = "#about"]').text('About Us');
+            $('a[href = "#how"]').text('About Us');
             $('a[href = "#contact"]').text('Contact');
             $('.navbar-collapse .language-btn').addClass('ms-5');
             $('.navbar-collapse .language-btn').removeClass('me-5');
@@ -235,7 +235,7 @@ for (let x = 0; x < trans.length; x++) {
             $('a[href = "#home"]').text('الرئيسية');
             $('a[href = "#employer"]').text('مزايا صاحب العمل');
             $('a[href = "#employee"]').text('مزايا الموظفين');
-            $('a[href = "#about"]').text('نبذة عنا');
+            $('a[href = "#how"]').text('نبذة عنا');
             $('a[href = "#contact"]').text('تواصل معنا');
             $('.navbar-collapse .language-btn').addClass('me-5');
             $('.navbar-collapse .language-btn').removeClass('ms-5');
